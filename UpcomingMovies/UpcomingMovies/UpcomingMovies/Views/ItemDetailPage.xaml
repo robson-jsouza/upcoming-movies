@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UpcomingMovies.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Spacing="20" Padding="15">
+            <Image Source="{Binding Item.NormalSizeImageURI}" />
+            <Label Text="Name:" FontSize="Medium" />
+            <Label Text="{Binding Item.Title}" FontSize="Small"/>
+            <Label Text="Genre(s):" FontSize="Medium" />
+            <Label Text="{Binding Item.AllGenresNames}" FontSize="Small"/>
+            <Label Text="Overview:" FontSize="Medium" />
+            <Label Text="{Binding Item.Overview}" FontSize="Small"/>
+            <Label Text="Release date:" FontSize="Medium" />
+            <Label Text="{Binding Item.Release_Date, StringFormat='{0:MM/dd/yyyy}'}" FontSize="Small"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
